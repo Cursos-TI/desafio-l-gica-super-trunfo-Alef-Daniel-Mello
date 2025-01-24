@@ -10,6 +10,7 @@ int main() {
     int PrimeiraCidade_PontosTuristicos;
     float PrimeiraCidade_Densidade;
     float PrimeiraCidade_PIBperCapta;
+    int PrimeiraCidade_Pontos;
 
      int SegundaCidade_Codigo;
     char SegundaCidade_Nome[50];
@@ -19,9 +20,11 @@ int main() {
     int SegundaCidade_PontosTuristicos;
     float SegundaCidade_Densidade;
     float SegundaCidade_PIBperCapta;
+    int SegundaCidade_Pontos;
 
-    int OpcaoMenu;
-  
+    int PrimeiraComparação;
+    int SegundaComparação;
+
     printf("Desafio lógica do Super Trunfo!\n");
     printf("Vamos começar cadastrando a primeira cidade!\n");
     printf(" \n");
@@ -117,7 +120,7 @@ int main() {
 
     //---------- Lógica de comparação ------------
 
-    printf("** Escolha o atributo a ser comparado! **\n");
+    printf("*1* Escolha o primeiro atributo a ser comparado! *1*\n");
         printf("1 - População\n");
         printf("2 - Área\n");
         printf("3 - PIB\n");
@@ -125,9 +128,19 @@ int main() {
         printf("5 - PIB per Capta\n");
         printf("6 - Densidade\n");
 
-        scanf("%d",&OpcaoMenu);
+        scanf("%d",&PrimeiraComparação);
 
-    switch (OpcaoMenu)
+      printf("*2* Escolha o segundo atributo a ser comparado! *2*\n");
+        printf("1 - População\n");
+        printf("2 - Área\n");
+        printf("3 - PIB\n");
+        printf("4 - Pontos turísticos\n");
+        printf("5 - PIB per Capta\n");
+        printf("6 - Densidade\n");
+
+        scanf("%d",&SegundaComparação);
+
+    switch (PrimeiraComparação)
     {
       // População
     case 1:
@@ -139,10 +152,10 @@ int main() {
 
     if(PrimeiraCidade_Populacao > SegundaCidade_Populacao){
       printf("O vencedor é a Primeira cidade : %s!\n",PrimeiraCidade_Nome);
-
+      PrimeiraCidade_Pontos++;
     } else if(SegundaCidade_Populacao > PrimeiraCidade_Populacao){
       printf("O vencedor é a Segunda cidade : %s!\n",SegundaCidade_Nome);
-
+SegundaCidade_Pontos++;
     } else{
               printf("Foi um empate!\n");
     }} 
@@ -157,10 +170,10 @@ int main() {
     printf("Status comparado : Área em Km!\n");
  if(PrimeiraCidade_AreaKM > SegundaCidade_AreaKM){
       printf("O vencedor é a Primeira cidade : %s!\n",PrimeiraCidade_Nome);
-
+PrimeiraCidade_Pontos++;
     } else if(SegundaCidade_AreaKM > PrimeiraCidade_AreaKM){
       printf("O vencedor é a Segunda cidade : %s!\n",SegundaCidade_Nome);
-      
+      SegundaCidade_Pontos++;
     } else{
               printf("Foi um empate!\n");
     }
@@ -178,10 +191,10 @@ int main() {
 
     if(PrimeiraCidade_PIB > SegundaCidade_PIB){
       printf("O vencedor é a Primeira cidade : %s!\n",PrimeiraCidade_Nome);
-
+PrimeiraCidade_Pontos++;
     } else if(SegundaCidade_PIB > PrimeiraCidade_PIB){
       printf("O vencedor é a Segunda cidade : %s!\n",SegundaCidade_Nome);
-      
+      SegundaCidade_Pontos++;
     } else{
               printf("Foi um empate!\n");
     }
@@ -198,10 +211,10 @@ printf(" \n");
     printf("Status comparado : Pontos turísticos!\n");
 if(PrimeiraCidade_PontosTuristicos > SegundaCidade_PontosTuristicos){
       printf("O vencedor é a Primeira cidade : %s!\n",PrimeiraCidade_Nome);
-
+PrimeiraCidade_Pontos++;
     } else if(SegundaCidade_PontosTuristicos > PrimeiraCidade_PontosTuristicos){
       printf("O vencedor é a Segunda cidade : %s!\n",SegundaCidade_Nome);
-      
+      SegundaCidade_Pontos++;
     } else{
               printf("Foi um empate!\n");
     }
@@ -218,10 +231,10 @@ printf(" \n");
 
     if(PrimeiraCidade_PIBperCapta > SegundaCidade_PIBperCapta){
       printf("O vencedor é a Primeira cidade : %s!\n",PrimeiraCidade_Nome);
-
+PrimeiraCidade_Pontos++;
     } else if(SegundaCidade_PIBperCapta > PrimeiraCidade_PIBperCapta){
       printf("O vencedor é a Segunda cidade : %s!\n",SegundaCidade_Nome);
-      
+      SegundaCidade_Pontos++;
     } else{
               printf("Foi um empate!\n");
     }
@@ -238,10 +251,10 @@ printf(" \n");
 
  if(SegundaCidade_Densidade > PrimeiraCidade_Densidade){
       printf("O vencedor é a Primeira cidade : %s!\n",PrimeiraCidade_Nome);
-
+PrimeiraCidade_Pontos++;
     } else if(PrimeiraCidade_Densidade > SegundaCidade_Densidade){
       printf("O vencedor é a Segunda cidade : %s!\n",SegundaCidade_Nome);
-      
+      SegundaCidade_Pontos++;
     } else{
               printf("Foi um empate!\n");
     }
@@ -251,6 +264,134 @@ printf(" \n");
 default:
       break;
     }
-   
+
+    switch (SegundaComparação)
+    {
+      // População
+    case 1:
+    {
+    printf(" \n");
+    printf("Iniciando comparações!\n");
+    printf(" \n");
+    printf("Status comparado : População!\n");
+
+    if(PrimeiraCidade_Populacao > SegundaCidade_Populacao){
+      printf("O vencedor é a Primeira cidade : %s!\n",PrimeiraCidade_Nome);
+      PrimeiraCidade_Pontos++;
+    } else if(SegundaCidade_Populacao > PrimeiraCidade_Populacao){
+      printf("O vencedor é a Segunda cidade : %s!\n",SegundaCidade_Nome);
+SegundaCidade_Pontos++;
+    } else{
+              printf("Foi um empate!\n");
+    }} 
+      break;
+    
+    // Area
+    case 2:
+{
+  printf(" \n");
+    printf("Iniciando comparações!\n");
+    printf(" \n");
+    printf("Status comparado : Área em Km!\n");
+ if(PrimeiraCidade_AreaKM > SegundaCidade_AreaKM){
+      printf("O vencedor é a Primeira cidade : %s!\n",PrimeiraCidade_Nome);
+PrimeiraCidade_Pontos++;
+    } else if(SegundaCidade_AreaKM > PrimeiraCidade_AreaKM){
+      printf("O vencedor é a Segunda cidade : %s!\n",SegundaCidade_Nome);
+      SegundaCidade_Pontos++;
+    } else{
+              printf("Foi um empate!\n");
+    }
+}
+    break;
+
+    // PIB
+    case 3:
+
+{
+  printf(" \n");
+    printf("Iniciando comparações!\n");
+    printf(" \n");
+    printf("Status comparado : PIB!\n");
+
+    if(PrimeiraCidade_PIB > SegundaCidade_PIB){
+      printf("O vencedor é a Primeira cidade : %s!\n",PrimeiraCidade_Nome);
+PrimeiraCidade_Pontos++;
+    } else if(SegundaCidade_PIB > PrimeiraCidade_PIB){
+      printf("O vencedor é a Segunda cidade : %s!\n",SegundaCidade_Nome);
+      SegundaCidade_Pontos++;
+    } else{
+              printf("Foi um empate!\n");
+    }
+
+}   
+    break;
+
+    // Pontos Turísticos
+    case 4:
+    {
+printf(" \n");
+    printf("Iniciando comparações!\n");
+    printf(" \n");
+    printf("Status comparado : Pontos turísticos!\n");
+if(PrimeiraCidade_PontosTuristicos > SegundaCidade_PontosTuristicos){
+      printf("O vencedor é a Primeira cidade : %s!\n",PrimeiraCidade_Nome);
+PrimeiraCidade_Pontos++;
+    } else if(SegundaCidade_PontosTuristicos > PrimeiraCidade_PontosTuristicos){
+      printf("O vencedor é a Segunda cidade : %s!\n",SegundaCidade_Nome);
+      SegundaCidade_Pontos++;
+    } else{
+              printf("Foi um empate!\n");
+    }
+    }
+    break;
+
+    // PIB per Capta
+    case 5:
+    {
+printf(" \n");
+    printf("Iniciando comparações!\n");
+    printf(" \n");
+    printf("Status comparado : PIB per Capta!\n");
+
+    if(PrimeiraCidade_PIBperCapta > SegundaCidade_PIBperCapta){
+      printf("O vencedor é a Primeira cidade : %s!\n",PrimeiraCidade_Nome);
+PrimeiraCidade_Pontos++;
+    } else if(SegundaCidade_PIBperCapta > PrimeiraCidade_PIBperCapta){
+      printf("O vencedor é a Segunda cidade : %s!\n",SegundaCidade_Nome);
+      SegundaCidade_Pontos++;
+    } else{
+              printf("Foi um empate!\n");
+    }
+    }
+    break;
+
+    // Densidade
+    case 6:
+    {
+      printf(" \n");
+    printf("Iniciando comparações!\n");
+    printf(" \n");
+    printf("Status comparado : Densidade!\n");
+
+ if(SegundaCidade_Densidade > PrimeiraCidade_Densidade){
+      printf("O vencedor é a Primeira cidade : %s!\n",PrimeiraCidade_Nome);
+PrimeiraCidade_Pontos++;
+    } else if(PrimeiraCidade_Densidade > SegundaCidade_Densidade){
+      printf("O vencedor é a Segunda cidade : %s!\n",SegundaCidade_Nome);
+      SegundaCidade_Pontos++;
+    } else{
+              printf("Foi um empate!\n");
+    }
+    }
+    break;
+
+default:
+      break;
+    }
+
+printf("Resultado da partida :\n");
+PrimeiraCidade_Pontos != SegundaCidade_Pontos ? (PrimeiraCidade_Pontos > SegundaCidade_Pontos ? printf("A primeira cidade venceu!") : printf("A segunda cidade venceu!")):(printf("Vocês empataram!"));
+   ;
     return 0;
 }
