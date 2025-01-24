@@ -132,7 +132,87 @@ int main() {
     // Comparação de Cartas:
     // Desenvolva a lógica de comparação entre duas cartas.
     // Utilize estruturas de decisão como if, if-else para comparar atributos como população, área, PIB, etc.
+    
+    //---------- Lógica de comparação ------------
+    printf(" \n");
+    printf("Iniciando comparações!\n");
+    printf(" \n");
+    printf("Primeira comparação : População!\n");
 
+    if(PrimeiraCidade_Populacao > SegundaCidade_Populacao){
+      printf("O vencedor é a Primeira cidade : %s!\n",PrimeiraCidade_Nome);
+
+    } else if(SegundaCidade_Populacao > PrimeiraCidade_Populacao){
+      printf("O vencedor é a Segunda cidade : %s!\n",SegundaCidade_Nome);
+
+    } else{
+              printf("Foi um empate!\n");
+    }
+
+     printf(" \n");
+    printf("Segunda comparação : Área em Km!\n");
+
+    if(PrimeiraCidade_AreaKM > SegundaCidade_AreaKM){
+      printf("O vencedor é a Primeira cidade : %s!\n",PrimeiraCidade_Nome);
+
+    } else if(SegundaCidade_AreaKM > PrimeiraCidade_AreaKM){
+      printf("O vencedor é a Segunda cidade : %s!\n",SegundaCidade_Nome);
+      
+    } else{
+              printf("Foi um empate!\n");
+    }
+
+ printf(" \n");
+    printf("Terceira comparação : PIB!\n");
+
+    if(PrimeiraCidade_PIB > SegundaCidade_PIB){
+      printf("O vencedor é a Primeira cidade : %s!\n",PrimeiraCidade_Nome);
+
+    } else if(SegundaCidade_PIB > PrimeiraCidade_PIB){
+      printf("O vencedor é a Segunda cidade : %s!\n",SegundaCidade_Nome);
+      
+    } else{
+              printf("Foi um empate!\n");
+    }
+
+     printf(" \n");
+    printf("Quarta comparação : Pontos turísticos!\n");
+
+    if(PrimeiraCidade_PontosTuristicos > SegundaCidade_PontosTuristicos){
+      printf("O vencedor é a Primeira cidade : %s!\n",PrimeiraCidade_Nome);
+
+    } else if(SegundaCidade_PontosTuristicos > PrimeiraCidade_PontosTuristicos){
+      printf("O vencedor é a Segunda cidade : %s!\n",SegundaCidade_Nome);
+      
+    } else{
+              printf("Foi um empate!\n");
+    }
+
+     printf(" \n");
+    printf("Quinta comparação : PIB per Capta!\n");
+
+    if(PrimeiraCidade_PIBperCapta > SegundaCidade_PIBperCapta){
+      printf("O vencedor é a Primeira cidade : %s!\n",PrimeiraCidade_Nome);
+
+    } else if(SegundaCidade_PIBperCapta > PrimeiraCidade_PIBperCapta){
+      printf("O vencedor é a Segunda cidade : %s!\n",SegundaCidade_Nome);
+      
+    } else{
+              printf("Foi um empate!\n");
+    }
+
+     printf(" \n");
+    printf("Sexta e Última comparação : Densidade!\n");
+
+    if(SegundaCidade_Densidade > PrimeiraCidade_Densidade){
+      printf("O vencedor é a Primeira cidade : %s!\n",PrimeiraCidade_Nome);
+
+    } else if(PrimeiraCidade_Densidade > SegundaCidade_Densidade){
+      printf("O vencedor é a Segunda cidade : %s!\n",SegundaCidade_Nome);
+      
+    } else{
+              printf("Foi um empate!\n");
+    }
     // Exemplo:
     // if (populacaoA > populacaoB) {
     //     printf("Cidade 1 tem maior população.\n");
