@@ -102,7 +102,7 @@ int main() {
     printf("Todos os valores foram definidos, mostrando resumo das cidades :\n");
     printf(" \n");
 
-    printf("Primeira cidade :");
+    printf("Primeira cidade :\n");
     printf("Nome : %s\n", PrimeiraCidade_Nome);
     printf("Código : %d\n", PrimeiraCidade_Codigo);
     printf("População : %d\n", PrimeiraCidade_Populacao);
@@ -114,7 +114,7 @@ int main() {
 
     printf(" \n");
 
-    printf("Segunda cidade :");
+    printf("Segunda cidade :\n");
     printf("Nome : %s\n", SegundaCidade_Nome);
     printf("Código : %d\n", SegundaCidade_Codigo);
     printf("População : %d\n", SegundaCidade_Populacao);
