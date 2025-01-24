@@ -1,14 +1,6 @@
 #include <stdio.h>
 
-// Desafio Super Trunfo - Países
-// Tema 2 - Comparação das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de comparação de cartas de cidades. 
-// Siga os comentários para implementar cada parte do desafio.
-
 int main() {
-
-    // Definição das variáveis para armazenar as propriedades das cidades
-    // Você pode utilizar o código do primeiro desafio
 
     int PrimeiraCidade_Codigo;
     char PrimeiraCidade_Nome[50];
@@ -28,11 +20,8 @@ int main() {
     float SegundaCidade_Densidade;
     float SegundaCidade_PIBperCapta;
 
-    // Cadastro das Cartas:
-    // Implemente a lógica para solicitar ao usuário que insira os dados das cidades
-    // utilizando a função scanf para capturar as entradas.
-    // utilize o código do primeiro desafio
-
+    int OpcaoMenu;
+  
     printf("Desafio lógica do Super Trunfo!\n");
     printf("Vamos começar cadastrando a primeira cidade!\n");
     printf(" \n");
@@ -123,21 +112,30 @@ int main() {
     printf("Pontos turísticos : %d\n", SegundaCidade_PontosTuristicos);
     printf("PIB per Capta : %f\n", SegundaCidade_PIBperCapta);
     printf("Densidade : %f\n", SegundaCidade_Densidade);
-    // Exemplo:
-    // printf("Digite o código da cidade: ");
-    // scanf("%s", codigo);
-    // 
-    // (Repita para cada propriedade)
 
-    // Comparação de Cartas:
-    // Desenvolva a lógica de comparação entre duas cartas.
-    // Utilize estruturas de decisão como if, if-else para comparar atributos como população, área, PIB, etc.
-    
+    printf(" \n");
+
     //---------- Lógica de comparação ------------
+
+    printf("** Escolha o atributo a ser comparado! **\n");
+        printf("1 - População\n");
+        printf("2 - Área\n");
+        printf("3 - PIB\n");
+        printf("4 - Pontos turísticos\n");
+        printf("5 - PIB per Capta\n");
+        printf("6 - Densidade\n");
+
+        scanf("%d",&OpcaoMenu);
+
+    switch (OpcaoMenu)
+    {
+      // População
+    case 1:
+    {
     printf(" \n");
     printf("Iniciando comparações!\n");
     printf(" \n");
-    printf("Primeira comparação : População!\n");
+    printf("Status comparado : População!\n");
 
     if(PrimeiraCidade_Populacao > SegundaCidade_Populacao){
       printf("O vencedor é a Primeira cidade : %s!\n",PrimeiraCidade_Nome);
@@ -147,12 +145,17 @@ int main() {
 
     } else{
               printf("Foi um empate!\n");
-    }
-
-     printf(" \n");
-    printf("Segunda comparação : Área em Km!\n");
-
-    if(PrimeiraCidade_AreaKM > SegundaCidade_AreaKM){
+    }} 
+      break;
+    
+    // Area
+    case 2:
+{
+  printf(" \n");
+    printf("Iniciando comparações!\n");
+    printf(" \n");
+    printf("Status comparado : Área em Km!\n");
+ if(PrimeiraCidade_AreaKM > SegundaCidade_AreaKM){
       printf("O vencedor é a Primeira cidade : %s!\n",PrimeiraCidade_Nome);
 
     } else if(SegundaCidade_AreaKM > PrimeiraCidade_AreaKM){
@@ -161,9 +164,17 @@ int main() {
     } else{
               printf("Foi um empate!\n");
     }
+}
+    break;
 
- printf(" \n");
-    printf("Terceira comparação : PIB!\n");
+    // PIB
+    case 3:
+
+{
+  printf(" \n");
+    printf("Iniciando comparações!\n");
+    printf(" \n");
+    printf("Status comparado : PIB!\n");
 
     if(PrimeiraCidade_PIB > SegundaCidade_PIB){
       printf("O vencedor é a Primeira cidade : %s!\n",PrimeiraCidade_Nome);
@@ -175,10 +186,17 @@ int main() {
               printf("Foi um empate!\n");
     }
 
-     printf(" \n");
-    printf("Quarta comparação : Pontos turísticos!\n");
+}   
+    break;
 
-    if(PrimeiraCidade_PontosTuristicos > SegundaCidade_PontosTuristicos){
+    // Pontos Turísticos
+    case 4:
+    {
+printf(" \n");
+    printf("Iniciando comparações!\n");
+    printf(" \n");
+    printf("Status comparado : Pontos turísticos!\n");
+if(PrimeiraCidade_PontosTuristicos > SegundaCidade_PontosTuristicos){
       printf("O vencedor é a Primeira cidade : %s!\n",PrimeiraCidade_Nome);
 
     } else if(SegundaCidade_PontosTuristicos > PrimeiraCidade_PontosTuristicos){
@@ -187,9 +205,16 @@ int main() {
     } else{
               printf("Foi um empate!\n");
     }
+    }
+    break;
 
-     printf(" \n");
-    printf("Quinta comparação : PIB per Capta!\n");
+    // PIB per Capta
+    case 5:
+    {
+printf(" \n");
+    printf("Iniciando comparações!\n");
+    printf(" \n");
+    printf("Status comparado : PIB per Capta!\n");
 
     if(PrimeiraCidade_PIBperCapta > SegundaCidade_PIBperCapta){
       printf("O vencedor é a Primeira cidade : %s!\n",PrimeiraCidade_Nome);
@@ -200,11 +225,18 @@ int main() {
     } else{
               printf("Foi um empate!\n");
     }
+    }
+    break;
 
-     printf(" \n");
-    printf("Sexta e Última comparação : Densidade!\n");
+    // Densidade
+    case 6:
+    {
+      printf(" \n");
+    printf("Iniciando comparações!\n");
+    printf(" \n");
+    printf("Status comparado : Densidade!\n");
 
-    if(SegundaCidade_Densidade > PrimeiraCidade_Densidade){
+ if(SegundaCidade_Densidade > PrimeiraCidade_Densidade){
       printf("O vencedor é a Primeira cidade : %s!\n",PrimeiraCidade_Nome);
 
     } else if(PrimeiraCidade_Densidade > SegundaCidade_Densidade){
@@ -213,19 +245,12 @@ int main() {
     } else{
               printf("Foi um empate!\n");
     }
-    // Exemplo:
-    // if (populacaoA > populacaoB) {
-    //     printf("Cidade 1 tem maior população.\n");
-    // } else {
-    //     printf("Cidade 2 tem maior população.\n");
-    // }
+    }
+    break;
 
-    // Exibição dos Resultados:
-    // Após realizar as comparações, exiba os resultados para o usuário.
-    // Certifique-se de que o sistema mostre claramente qual carta venceu e com base em qual atributo.
-
-    // Exemplo:
-    // printf("A cidade vencedora é: %s\n", cidadeVencedora);
-
+default:
+      break;
+    }
+   
     return 0;
 }
