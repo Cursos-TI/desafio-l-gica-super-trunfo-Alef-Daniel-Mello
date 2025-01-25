@@ -22,8 +22,8 @@ int main() {
     float SegundaCidade_PIBperCapta;
     int SegundaCidade_Pontos;
 
-    int PrimeiraComparação;
-    int SegundaComparação;
+    int PrimeiraComparacao;
+    int SegundaComparacao;
 
     printf("Desafio lógica do Super Trunfo!\n");
     printf("Vamos começar cadastrando a primeira cidade!\n");
@@ -128,7 +128,7 @@ int main() {
         printf("5 - PIB per Capta\n");
         printf("6 - Densidade\n");
 
-        scanf("%d",&PrimeiraComparação);
+        scanf("%d",&PrimeiraComparacao);
 
       printf("*2* Escolha o segundo atributo a ser comparado! *2*\n");
         printf("1 - População\n");
@@ -138,9 +138,10 @@ int main() {
         printf("5 - PIB per Capta\n");
         printf("6 - Densidade\n");
 
-        scanf("%d",&SegundaComparação);
+        scanf("%d",&SegundaComparacao);
 
-    switch (PrimeiraComparação)
+
+    switch (PrimeiraComparacao)
     {
       // População
     case 1:
@@ -265,7 +266,7 @@ default:
       break;
     }
 
-    switch (SegundaComparação)
+    switch (SegundaComparacao)
     {
       // População
     case 1:
@@ -389,6 +390,7 @@ PrimeiraCidade_Pontos++;
 default:
       break;
     }
+printf(" \n");
 
 printf("Resultado da partida :\n");
 PrimeiraCidade_Pontos != SegundaCidade_Pontos ? (PrimeiraCidade_Pontos > SegundaCidade_Pontos ? printf("A primeira cidade venceu!") : printf("A segunda cidade venceu!")):(printf("Vocês empataram!"));
